@@ -6,9 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Application entry point.
  */
+@SuppressWarnings("PMD.UseUtilityClass")
 @SpringBootApplication
 public class ScratchBootApplication {
-  public static void main(String[] args) {
+  public static void main(final String[] args) {
     SpringApplication.run(ScratchBootApplication.class, args);
   }
 }

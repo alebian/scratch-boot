@@ -3,6 +3,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 	id 'checkstyle'
+	id 'pmd'
 }
 
 group = 'com.alebian'
@@ -25,4 +26,11 @@ test {
 checkstyle {
 	configFile file('config/checkstyle/google_checks.xml');
 	toolVersion '8.39'
+}
+
+pmd {
+	consoleOutput = true
+	toolVersion = "6.21.0"
+	rulePriority = 5
+	ruleSets = [file("$projectDir/config/pmd/rules.xml")]
 }
